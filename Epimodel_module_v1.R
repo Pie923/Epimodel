@@ -23,14 +23,7 @@
 new_init_mod <- function(x, param, init, control, s) {
   
   # Master Data List
-  dat <- list()
-  dat$param <- param
-  dat$init <- init
-  dat$control <- control
-  
-  dat$attr <- list()
-  dat$stats <- list()
-  dat$temp <- list()
+  dat <- create_dat_object(param, init, control)
   
   # Network parameters
   dat$nw[[1]] <- x
@@ -60,14 +53,7 @@ new_init_mod <- function(x, param, init, control, s) {
 init_mod_seed <- function(x, param, init, control, s) {
   
   # Master Data List
-  dat <- list()
-  dat$param <- param
-  dat$init <- init
-  dat$control <- control
-  
-  dat$attr <- list()
-  dat$stats <- list()
-  dat$temp <- list()
+  dat <- create_dat_object(param, init, control)
   
   # Network parameters
   dat$nw[[1]] <- x  #x is a network object 
