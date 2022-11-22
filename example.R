@@ -10,6 +10,8 @@ init_mod_seed <- function(x, param, init, control, s) {
   dat$nw[[1]] <- x  #x is a network object 
   dat <- set_param(dat, "groups", 1)
   
+  dat$nwparam <- list()
+  dat$nwparam[[1]] <- list(coef.diss = c(diss.model.type = "dummy"))
   # Epidemic parameters
   i.num <- get_init(dat, "i.num")
   seed.number <- get_init(dat, "seed.number")
